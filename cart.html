@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Home Harmony</title>
+    <meta name="description" content="View your selected home and kitchen accessories.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-2">
+        <div class="container">
+            <p class="logo"><i class="fas fa-home" style="font-size: 50px; color: #393939;"></i> Home Harmony</p>
+            <div class="ms-auto d-flex align-items-center">
+                <span id="usernameDisplay" class="mr-3"></span>
+                <button class="btn btn-back me-2 px-3 py-1" onclick="redirectTo('index.html')">Back to Home</button>
+                <button id="logoutBtn" class="btn btn-logout px-3 py-1 d-none" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h3 class="text-center favorite-title">Chosen Items</h3>
+        <div class="row align-items-center" id="cart-items"></div>
+    </div>
+
+    <div class="container mt-3">
+        <h3 class="text-center">Total Price: <span id="totalPrice">0</span> EGP</h3>
+        <div class="text-center">
+            <button class="btn btn-checkout" onclick="alert('Proceeding to checkout...')">Checkout</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container mt-5">
+        <h3 class="text-center favorite-title">Favorite Items</h3>
+        <div id="favorite-items" class="favorite-items-container"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            loadCartAndFavorites();
+            renderCartItems();
+            renderFavoriteItems();
+            updateTotalPrice();
+            updateUserDisplay();
+        }
+    </script>
+</body>
+</html>

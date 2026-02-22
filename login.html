@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Home Harmony</title>
+    <meta name="description" content="Login to access your Home Harmony account.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-2">
+        <div class="container">
+            <p class="logo"><i class="fas fa-home" style="font-size: 50px; color: #393939;"></i> Home Harmony</p>
+            <div class="ms-auto">
+                <button class="btn btn-back me-2 px-3 py-1" onclick="redirectTo('index.html')">Back to Home</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h3 class="text-center">Login</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <div id="alertMessage" class="alert d-none" role="alert"></div>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-register-form">Login</button>
+                    </form>
+                    <p class="text-center mt-3">Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
