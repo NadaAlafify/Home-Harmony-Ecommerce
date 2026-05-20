@@ -16,4 +16,3 @@ Check out the live project here: (https://nadaalafify.github.io/Home-Harmony-Eco
 - **Product Catalog:** Well-designed grid displaying products with images, prices, details, and action buttons.
 - **Interactive Top Bar:** Clean navigation panel featuring a shopping cart counter `Cart (0)` and authorization triggers (`Login` & `Register`).
 - **Search Functionality:** An integrated product search bar with custom filters.
-- **Pure Code Foundation:** Written 100% manually from scratch to master DOM manipulation, logical styling, and pure frontend flow without external heavy frameworks.
