@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Harmony - Home Accessories</title>
-    <meta name="description" content="Discover the best accessories for your home and kitchen with amazing deals and stylish designs.">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-2">
-        <div class="container">
-            <p class="logo"><i class="fas fa-home" style="font-size: 50px; color: #393939;"></i> Home Harmony</p>
-            <div class="ms-auto d-flex align-items-center">
-                <span id="usernameDisplay" class="mr-3"></span>
-                <button class="btn btn-cart me-2" onclick="toggleCartDropdown()">
-                    <i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)
-                </button>
-                <button id="loginBtn" class="btn btn-login me-2 px-3 py-1" onclick="redirectTo('login.html')">Login</button>
-                <button id="registerBtn" class="btn btn-register px-3 py-1" onclick="redirectTo('register.html')">Register</button>
-                <button id="logoutBtn" class="btn btn-logout px-3 py-1 d-none" onclick="logout()">Logout</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Harmony - Home Accessories</title>
+        <meta name="description" content="Discover the best accessories for your home and kitchen with amazing deals and stylish designs.">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-2">
+            <div class="container">
+                <p class="logo"><i class="fas fa-home" style="font-size: 50px; color: #393939;"></i> Home Harmony</p>
+                <div class="ms-auto d-flex align-items-center">
+                    <span id="usernameDisplay" class="mr-3"></span>
+                    <button class="btn btn-cart me-2" onclick="toggleCartDropdown()">
+                        <i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)
+                    </button>
+                    <button id="loginBtn" class="btn btn-login me-2 px-3 py-1" onclick="redirectTo('login.html')">Login</button>
+                    <button id="registerBtn" class="btn btn-register px-3 py-1" onclick="redirectTo('register.html')">Register</button>
+                    <button id="logoutBtn" class="btn btn-logout px-3 py-1 d-none" onclick="logout()">Logout</button>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-3">
-                <select id="searchType" class="form-control">
-                    <option value="name">Search by Product Name</option>
-                    <option value="Details">Search by Details</option>
-                </select>
-            </div>
-            <div class="col-md-7">
-                <input type="text" id="searchBox" class="form-control" placeholder="Search here" onkeyup="searchProducts()">
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-block btn-search" onclick="searchProducts()">Search</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="loading" class="loading-spinner d-none"></div>
-
-    <div class="container mt-5">
-        <div class="row" id="products-row"></div>
-    </div>
-
-    <div id="cartDropdownItems" class="cart-dropdown"></div>
-
-
-
-  
+        </nav>
     
-
-    <script src="script.js"></script>
-</body>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <select id="searchType" class="form-control">
+                        <option value="name">Search by Product Name</option>
+                        <option value="Details">Search by Details</option>
+                    </select>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="searchBox" class="form-control" placeholder="Search here" onkeyup="searchProducts()">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-block btn-search" onclick="searchProducts()">Search</button>
+                </div>
+            </div>
+        </div>
+    
+        <div id="loading" class="loading-spinner d-none"></div>
+    
+        <div class="container mt-5">
+            <div class="row" id="products-row"></div>
+        </div>
+    
+        <div id="cartDropdownItems" class="cart-dropdown"></div>
+    
+    
+    
+      
+        
+    
+        <script src="script.js"></script>
+    </body>
 </html>
